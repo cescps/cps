@@ -15,6 +15,9 @@ body.dark-mode {
     .underline-link {
       text-decoration: underline;
     }
+.underline {
+      text-decoration: underline;
+    }
   .switch {
       position: relative;
       display: inline-block;
@@ -175,3 +178,4 @@ body {
 .text-lg {
   margin: 10px;
 }
+
