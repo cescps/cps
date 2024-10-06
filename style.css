@@ -85,14 +85,15 @@ body.dark-mode {
 }
 
 .container {
-    position: relative; /* Needed to position the greeting absolutely within it */
+    position: relative; 
     text-align: center;
 }
 
 .h1 {
-    font-size: 3rem; /* Adjusted for better visual appearance */
-    margin-top: 10; /* Removed additional space */
-    padding-left: 20px; /* Adds space from the left edge */
+    font-size: 3rem; 
+    margin-top: 10; 
+   font-weight: bold; 
+    padding-left: 20px;
 }
 
 
@@ -119,6 +120,8 @@ footer a {
   text-decoration: none;
   color: white;
   font-size: 1.25rem;
+font-weight: bold; 
+
 }
 
 }
