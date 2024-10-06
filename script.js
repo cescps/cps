@@ -1,97 +1,102 @@
-const cet = document.querySelector('.cet .the-time');
+ function setupTabs() {
+  // Add event listeners to all nav-items
+  document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+      e.preventDefault(); // Stop the page from jumping
+      const tabId = this.textContent.trim().toLowerCase(); // Get the text and convert it to lowercase
+      switchTab(tabId); // Call switchTab with the right ID
+    });
+  });
+} 
 
-  const animate = () => {
-    const timeCET = moment().tz('Europe/Paris').format('HH:mm:ss');
-    cet.innerHTML = `<span style="color: ${document.body.classList.contains('dark-mode') ? 'white' : 'black'};">${timeCET}</span>`;
-  };
+function switchTab(tabId) {
+      // Hide all tabs
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.add('hidden');
+      });
+      // Show the selected tab
+      document.getElementById(tabId).classList.remove('hidden');
+      // Update navbar underline
+      document.querySelectorAll('.nav-item').forEach(item => {
+        item.style.textDecoration = item.getAttribute('href').substring(1) === tabId ? 'underline red' : 'none';
+      });
+    }
+    // Initialize the default tab
+    switchTab('inici');
 
-  setInterval(animate, 1000);
-  animate();
+function switchTab(tabId) {
+  // Hide all tabs
+  document.querySelectorAll('.tab-content').forEach(tab => {
+    tab.classList.add('hidden');
+  });
+
+  // Show the selected tab
+  const selectedTab = document.getElementById(tabId);
+  if (selectedTab) {
+    selectedTab.classList.remove('hidden');
+  } else {
+    console.error('Tab not found:', tabId);
+  }
+
+  // Update active class for all nav-items
+  document.querySelectorAll('.nav-item').forEach(item => {
+    if (item.textContent.trim().toLowerCase() === tabId) {
+      item.style.textDecoration = 'underline';
+      item.style.textDecorationColor = 'red';
+    } else {
+      item.style.textDecoration = 'none';
+    }
+  }); 
+}
+
+// Initialize tabs and set the default view
+document.addEventListener('DOMContentLoaded', function() {
+  setupTabs(); // Setup tabs on page load
+  switchTab('inici'); // Set 'inici' as the default tab
+});
 
   function toggleMode() {
     const body = document.querySelector('body');
     body.classList.toggle('dark-mode');
     body.classList.toggle('light-mode');
-    animate();
   }
 
-// // Select DOM elements
-const showModalLinks = document.querySelectorAll(".underline-link");
-const bottomSheets = document.querySelectorAll(".bottom-sheet");
-const sheetOverlays = document.querySelectorAll(".sheet-overlay");
-const dragIcons = document.querySelectorAll(".drag-icon");
+  // Change greeting every 3 seconds
+  setInterval(changeGreeting, 3000);
 
-// Global variables for tracking drag events
-let isDragging = false, startY, startHeight, activeSheet;
 
-// Show the bottom sheet, hide body vertical scrollbar, and call updateSheetHeight
-const showBottomSheet = (sheet) => {
-    sheet.classList.add("show");
-    document.body.style.overflowY = "hidden";
-    updateSheetHeight(sheet.querySelector(".content"), 50);
-}
+ document.addEventListener('DOMContentLoaded', function() {
+      const navItems = document.querySelectorAll('.nav-item');
+      navItems.forEach(item => {
+        item.addEventListener('click', function() {
+          const allTabs = document.querySelectorAll('.tab-content');
+          const targetTab = document.getElementById(this.getAttribute('data-target'));
+          
+          allTabs.forEach(tab => {
+            tab.classList.add('hidden'); // Hide all tabs
+          });
+          targetTab.classList.remove('hidden'); // Show the clicked tab
 
-const updateSheetHeight = (content, height) => {
-    content.style.height = `${height}vh`;
-    content.parentElement.classList.toggle("fullscreen", height === 100);
-}
-
-// Hide the bottom sheet and show body vertical scrollbar
-const hideBottomSheet = (sheet) => {
-    sheet.classList.remove("show");
-    document.body.style.overflowY = "auto";
-}
-
-// Sets initial drag position, sheetContent height and add dragging class to the bottom sheet
-const dragStart = (e, sheet) => {
-    isDragging = true;
-    activeSheet = sheet;
-    startY = e.pageY || e.touches?.[0].pageY;
-    startHeight = parseInt(activeSheet.querySelector(".content").style.height);
-    activeSheet.classList.add("dragging");
-}
-
-// Calculates the new height for the sheet content and call the updateSheetHeight function
-const dragging = (e) => {
-    if(!isDragging || !activeSheet) return;
-    const delta = startY - (e.pageY || e.touches?.[0].pageY);
-    const newHeight = startHeight + delta / window.innerHeight * 100;
-    updateSheetHeight(activeSheet.querySelector(".content"), newHeight);
-}
-
-// Determines whether to hide, set to fullscreen, or set to default 
-// height based on the current height of the sheet content
-const dragStop = () => {
-    if(!isDragging || !activeSheet) return;
-    isDragging = false;
-    activeSheet.classList.remove("dragging");
-    const sheetHeight = parseInt(activeSheet.querySelector(".content").style.height);
-    sheetHeight < 25 ? hideBottomSheet(activeSheet) : sheetHeight > 75 ? updateSheetHeight(activeSheet.querySelector(".content"), 100) : updateSheetHeight(activeSheet.querySelector(".content"), 50);
-    activeSheet = null;
-}
-
-dragIcons.forEach((dragIcon, index) => {
-    dragIcon.addEventListener("mousedown", (e) => dragStart(e, bottomSheets[index]));
-    dragIcon.addEventListener("touchstart", (e) => dragStart(e, bottomSheets[index]));
-});
-
-document.addEventListener("mousemove", dragging);
-document.addEventListener("mouseup", dragStop);
-document.addEventListener("touchmove", dragging);
-document.addEventListener("touchend", dragStop);
-
-sheetOverlays.forEach((sheetOverlay, index) => {
-    sheetOverlay.addEventListener("click", () => hideBottomSheet(bottomSheets[index]));
-});
-
-showModalLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const target = link.getAttribute("data-target");
-        const sheetToShow = document.getElementById(target);
-        if (sheetToShow) {
-            showBottomSheet(sheetToShow);
-        }
+          navItems.forEach(nav => {
+            nav.classList.remove('active'); // Remove active from all nav items
+          });
+          this.classList.add('active'); // Add active to the clicked nav item
+        });
+      });
     });
-});
- 
+
+
+ const greetings = ['Hola', 'Hello', 'Bonjour', 'Ciao', 'Hallo', 'Olá', 'Hej', 'Salut', 'Konnichiwa'];
+    let index = 0;
+    
+    function changeGreeting() {
+        const greetingElement = document.getElementById('greeting');
+        greetingElement.style.opacity = 0; // Fade out
+        setTimeout(() => {
+            index = (index + 1) % greetings.length;
+            greetingElement.textContent = greetings[index];
+            greetingElement.style.opacity = 1; // Fade in
+        }, 1000); // Wait 1 second before changing text
+    }
+    
+    setInterval(changeGreeting, 3000); // Change greeting every 3 seconds
