@@ -99,10 +99,13 @@ body.dark-mode {
 footer {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: auto;
+  padding: 12px 30px;
 }
 
 footer .bg-gray-800 {
