@@ -1,432 +1,218 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>cps</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="logo.png"/>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-<!-- partial:index.partial.html -->
+  
+  
 <body class="dark-mode">
-
-<div class="max-w-3xl mx-auto py-12 px-6">
-  <h1 class="text-4xl font-bold leading-tight mb-4">
-    cps</span>.
-  </h1>
-
-  <label class="switch">
-    <input type="checkbox" onclick="toggleMode()">
-    <span class="slider round"></span>
-  </label>
-  
-    </br>
-    </br>
-
-
-  <div class="cet">
-    <p class="the-time"></p>
-  </div>
-    </br>
-
-  <p class="text-lg mb-4">Benvingut. Web en construcció.</p>
-  <p class="text-lg mb-4">De moment, disfruta d'aquesta imatge.</p>
-
-  <figure class="max-w-lg mx-auto">
-    <img class="h-auto max-w-full rounded-lg" src="https://cdn.motor1.com/images/mgl/yKJwK/s1/2020-porsche-911-turbo.jpg" alt="Porsche 911 Turbo S">
-    <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Porsche 911 Turbo S</figcaption>
-  </figure>
-
-</br></br>
-
-<p class="text-2xl font-bold leading-tight mb-4">Jocs:</p>
-
- <p class="text-lg">
-    &#x2022; <a href="#" class="underline-link" data-target="lletres">Lletres</a> 🔠
-  </p>
-
-   <div class="bottom-sheet" id="lletres">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2> <a href="https://lletres.cps.cat" >Lletres</a> 🔠</h2>
-              
-                <p>Inspirat pel programa "Cifras y Letras" de La 2, aquest joc consisteix en ordenar les lletres que apareixen, per formar una paraula en català.</p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-            </div>
-        </div>
-    </div>
-
-  
-
-  <p class="text-lg">
-    &#x2022; <a href="#" class="underline-link" data-target="emojis">Emojis</a> 🤯
-  </p>
-
-   <div class="bottom-sheet" id="emojis">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2> <a href="https://emojis.cps.cat">Emojis</a> 🤯</h2>
-              
-                <p>Candy Crush, però amb emojis.</p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-                
-               
-            </div>
-        </div>
-    </div>
-
-
-<!--
-<p class="text-lg">
-    &#x2022; <a href="#" class="underline-link" data-target="TITOL">TITOL</a> 🤯
-  </p>
-
-   <div class="bottom-sheet" id="TITOL">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2> <a href="https://TITOL.cps.cat" class="underline">TITOL</a> 🤯</h2>
-              
-                <p>Descripció</p>
-                
-               
-            </div>
-        </div>
-    </div> -->
-
-  <p class="text-lg">
-    &#x2022; <a href="#" class="underline-link" data-target="flashcards">Flashcards</a> 🃏
-  </p>
-
-   <div class="bottom-sheet" id="flashcards">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2> <a href="https://de.cps.cat">Flashcards</a> 🃏</h2>
-              
-                <p>Per aprendre paraules en alemany. Apareix una paraula, i quan cliques el botó verd, es revela la traducció en català. Per passar a la següent, utilitza el botó blau.</p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-                
-               
-            </div>
-        </div>
-    </div>
-
-
-  <p class="text-lg">
-    &#x2022; <a href="#" class="underline-link" data-target="confeti">Confeti</a> 🎉
-  </p>
-
-   <div class="bottom-sheet" id="confeti">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2> <a href="https://confeti.cps.cat">Confeti</a> 🎉</h2>
-              
-                <p>Clica a la pantalla per tirar confeti</p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-                
-               
-            </div>
-        </div>
-    </div>
-
-   <p class="text-lg">
-    &#x2022; <a href="#" class="underline-link" data-target="cartes">Cartes</a> ℹ️
-   </p>
-
-   <div class="bottom-sheet" id="cartes">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2> <a href="https://cartes.cps.cat">Cartes</a> ℹ️</h2>
-              
-                <p>Conèixer més a una altra persona a través de preguntes. Llisca la carta cap a un costat per passar a la següent.</p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-                
-               
-            </div>
-        </div>
-    </div>
-
- </br>
- </br>
+  <div class="max-w-3xl mx-auto py-12 px-6">
+    <!-- Inici --> 
+    <div id="inici" class="tab-content">
+      <h1 class="text-5xl font-bold leading-tight mb-4">cps.</h1>
       
-  <p class="text-2xl font-bold leading-tight mb-4">Projectes:</p>
-
- <p class="text-lg">
-        &#x2022; <a href="#" class="underline-link" data-target="Inspiracio">Inspiració</a> 💭
-    </p>
-    <div class="bottom-sheet" id="Inspiracio">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2><a href="https://inspiracio.cps.cat">Inspiració</a> 💭</h2>
-                  <p>Al clicar el botó, et porta a una pàgina web aleatòria.</p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-            </div>
-        </div>
+      
+      <div id="container">
+        <div class="greeting" id="greeting">Hola</div>
+      </div>
     </div>
+      
+    <!-- Jocs -->
+    <div id="jocs" class="tab-content hidden">
+       <h1 class="text-5xl font-bold leading-tight mb-4">jocs.</h1>
+  
+  <br><br><br>
 
+    <!-- Afegir colors diferents a cada rectangle -->
+    <a href="https://lletres.cps.cat" class="block game-card bg-blue-500 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">Lletres <span class="ml-2">🔠</span></div>
+        <p>
+          Inspirat pel programa "Cifras y Letras" de La 2, aquest joc consisteix en ordenar les lletres que apareixen, per formar una paraula en català.
+        </p>
+      </div>
+    </a>
 
-  <p class="text-lg">
-        &#x2022; <a href="#" class="underline-link" data-target="Respira">Respira</a> 💨 
-  </p>
-    <div class="bottom-sheet" id="Respira">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2><a href="https://respira.cps.cat">Respira</a> 💨</h2>
-                  <p>Inspira i expira seguint el cercle.</p>
-                <br>
+    <a href="https://emojis.cps.cat" class="block game-card bg-red-500 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">Emojis <span class="ml-2">🤯</span></div>
+        <p>
+          Candy Crush, però amb emojis.
+        </p>
+      </div>
+    </a>
+    
+    <a href="https://de.cps.cat" class="block game-card bg-green-500 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">Flashcards <span class="ml-2">🃏</span></div>
+        <p>
+          Per aprendre paraules en alemany. Apareix una paraula, i quan cliques el botó verd, es revela la traducció en català. Per passar a la següent, utilitza el botó blau.
+        </p>
+      </div>
+    </a>
 
-              <p>(clica el títol per anar a la web)</p>
-            </div>
+    <a href="https://confeti.cps.cat" class="block game-card bg-purple-500 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">Confeti <span class="ml-2">🎉</span></div>
+        <p>
+          Clica a la pantalla per tirar confeti.
+        </p>
+      </div>
+    </a>
+    
+    <a href="https://cartes.cps.cat" class="block game-card bg-yellow-500 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">Cartes <span class="ml-2">ℹ️</span></div>
+        <p>
+          Conèixer més a una altra persona a través de preguntes. Llisca la carta cap a un costat per passar a la següent.
+        </p>
+      </div>
+    </a>
+
+    <br><br>
+      
+      </div>
+    
+
+   <!-- Projectes -->
+<div id="projectes" class="tab-content hidden">
+  
+  <h1 class="text-5xl font-bold leading-tight mb-4">projectes.</h1>
+  
+  <br><br><br>
+
+    <!-- Afegir colors i enllaços a cada projecte -->
+    <a href="inspiracio.html" class="block game-card bg-blue-500 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">Inspiració <span class="ml-2">💭</span></div>
+        <p>
+          Al clicar el botó, et porta a una pàgina web aleatòria.
+        </p>
+      </div>
+    </a>
+
+    <a href="respira.html" class="block game-card bg-red-500 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">Respira <span class="ml-2">💨</span></div>
+        <p>
+          Inspira i expira seguint el cercle.
+        </p>
+      </div>
+    </a>
+    
+    <a href="catny.html" class="block game-card bg-green-500 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">CAT/NY <span class="ml-2">🕗</span></div>
+        <p>
+          Diferència horaria entre Nova York i Catalunya.
+        </p>
+      </div>
+    </a>
+
+    <a href="filo.html" class="block game-card bg-purple-500 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">Filo <span class="ml-2">💬</span></div>
+        <p>
+          Cada vegada que recarregues la pàgina, apareix una frase que podria haver dit un filòsof.
+        </p>
+      </div>
+    </a>
+    
+    <a href="res.html" class="block game-card bg-yellow-500 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">Res <span class="ml-2">⚪️</span></div>
+        <p>
+          Doncs això, res.
+        </p>
+      </div>
+    </a>
+
+    <a href="lyrics.html" class="block game-card bg-indigo-500 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">Lyrics <span class="ml-2">🎶</span></div>
+        <p>
+          Surten les lletres de la cançó a mesura que va sonant.
+        </p>
+      </div>
+    </a>
+
+    <a href="paywall.html" class="block game-card bg-pink-500 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">Paywall Remover <span class="ml-2">🔗</span></div>
+        <p>
+          Insereix l'enllaç d'un article amb paywall dins de la casella, i podràs llegir l'article complet sense restriccions.
+        </p>
+      </div>
+    </a>
+
+    <a href="subtitols.html" class="block game-card bg-gray-500 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">Subtítols <span class="ml-2">🗣️</span></div>
+        <p>
+          Al clicar el botó de "Start", anirà apareixent a la pantalla la transcripció del que diguis en veu alta.
+        </p>
+      </div>
+    </a>
+
+    <a href="loremipsum.html" class="block game-card bg-green-500 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">Lorem Ipsum <span class="ml-2">📄</span></div>
+        <p>
+          Lorem Ipsum (text per omplir espais), però en català.
+        </p>
+      </div>
+    </a>
+
+    <a href="app.html" class="block game-card bg-yellow-600 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">App <span class="ml-2">📱</span></div>
+        <p>
+          Pàgina web d'una app en desenvolupament.
+        </p>
+      </div>
+    </a>
+
+    <a href="blog.html" class="block game-card bg-blue-600 rounded-lg p-4 m-4 shadow-lg flex items-center">
+      <div>
+        <div class="game-title text-white text-2xl font-bold mb-2">Blog <span class="ml-2">📘</span></div>
+        <p>
+          Un blog on (en un futur) escriuré coses.
+        </p>
+      </div>
+    </a>
+    
+    <br><br>
+   
+   </div>
+   
+  <!-- navbar -->
+ <footer class="fixed bottom-8 w-full flex justify-center">
+     <div class="bg-gray-800 p-4 rounded-full flex items-center space-x-8 shadow-lg">
+    <button class="text-white text-xl font-semibold nav-item" data-target="inici">Inici</button>
+    <button class="text-white text-xl font-semibold nav-item" data-target="jocs">Jocs</button>
+   <button class="text-white text-xl font-semibold nav-item" data-target="projectes">Projectes</button>
+
+    <!-- Dark Mode Toggle -->
+    <label class="switch ml-6">
+      <input type="checkbox" onclick="toggleMode()">
+      <span class="slider round"></span>
+    </label>
         </div>
-    </div>
+  </footer>
 
-    <p class="text-lg">
-        &#x2022; <a href="#" class="underline-link" data-target="CATNY">CAT/NY</a> 🕗
-    </p>
-    <div class="bottom-sheet" id="CATNY">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2><a href="https://time.cps.cat">CAT/NY</a> 🕗</h2>
-                 <p>Diferència horaria entre Nova York i Catalunya.</p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-            </div>
-        </div>
-    </div>
-
-    <p class="text-lg">
-        &#x2022; <a href="#" class="underline-link" data-target="Filo">Filo</a> 💬
-    </p>
-    <div class="bottom-sheet" id="Filo">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2><a href="https://filo.cps.cat">Filo</a> 💬</h2>
-                  <p>Cada vegada que recarregues la pàgina, apareix una frase que podria haver dit un filòsof.</p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-            </div>
-        </div>
-    </div>
-
-
-   <p class="text-lg">
-        &#x2022; <a href="#" class="underline-link" data-target="Res">Res</a> ⚪️
-    </p>
-    <div class="bottom-sheet" id="Res">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2><a href="https://res.cps.cat">Res</a> ⚪️</h2>
-                  <p>Res.</p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-            </div>
-        </div>
-    </div>
-
-    <p class="text-lg">
-        &#x2022; <a href="#" class="underline-link" data-target="Lyrics">Lyrics</a> 🎶
-    </p>
-    <div class="bottom-sheet" id="Lyrics">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2><a href="https://lyrics.cps.cat">Lyrics</a> 🎶</h2>
-                <p>Es van mostrant les lletres de la cançó a mesura que va sonant</p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-            </div>
-        </div>
-    </div>
-
-    <p class="text-lg">
-        &#x2022; <a href="#" class="underline-link" data-target="PaywallRemover">Paywall Remover</a> 🔗
-    </p>
-    <div class="bottom-sheet" id="PaywallRemover">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2><a href="https://paywall.cps.cat" >Paywall Remover</a> 🔗</h2>
-                <p>Insereix l'enllaç d'un article amb paywall dins de la casella, i podràs llegir l'article complet sense restriccions.</p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-            </div>
-        </div>
-    </div>
-
-    <p class="text-lg">
-        &#x2022; <a href="#" class="underline-link" data-target="Subtitols">Subtítols</a> 🗣️
-    </p>
-    <div class="bottom-sheet" id="Subtitols">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2><a href="https://sub.cps.cat">Subtítols</a> 🗣️</h2>
-                   <p>Al clicar el botó de "Start", anirà apareixent a la pantalla la transcripció del que diguis en veu alta.</p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-            </div>
-        </div>
-    </div>
-
-    <p class="text-lg">
-        &#x2022; <a href="#" class="underline-link" data-target="LoremIpsum">Lorem Ipsum</a> 📄
-    </p>
-    <div class="bottom-sheet" id="LoremIpsum">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2><a href="https://lorem.cps.cat">Lorem Ipsum</a> 📄</h2>
-                   <p>Lorem Ipsum (text per omplir espais), però en català.</p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-            </div>
-        </div>
-    </div>
-
-
-   <p class="text-lg">
-        &#x2022; <a href="#" class="underline-link" data-target="Text">Text</a> ✏️ 
-   </p>
-    <div class="bottom-sheet" id="Text">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2><a href="https://text.cps.cat">Text</a> ✏️</h2>
-                   <p>Editor de text.</p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-            </div>
-        </div>
-    </div>
-
-
-    <p class="text-lg">
-        &#x2022; <a href="#" class="underline-link" data-target="App">App</a> 📱
-    </p>
-    <div class="bottom-sheet" id="App">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2><a href="https://app.cps.cat">App</a> 📱</h2>
-                  <p>Pàgina web sobre una app en desenvolupament.</p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-            </div>
-        </div>
-    </div>
-
-    <p class="text-lg">
-        &#x2022; <a href="#" class="underline-link" data-target="Blog">Blog</a> 📘
-    </p>
-    <div class="bottom-sheet" id="Blog">
-        <div class="sheet-overlay" id="overlay"></div>
-        <div class="content">
-            <div class="header">
-                <div class="drag-icon"><span></span></div>
-            </div>
-            <div class="body">
-                <h2><a href="https://blog.cps.cat">Blog</a> 📘</h2>
-                 <p>Un blog per escriure coses, però (de moment) sense contingut. </p>
-                <br>
-
-              <p>(clica el títol per anar a la web)</p>
-            </div>
-        </div>
-    </div>
-
-
-</div>
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data-10-year-range.js'></script>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
+  
+  
+  
+  <!-- Partial scripts and more content if necessary -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data-10-year-range.js'></script>
+  <script src="./script.js"></script>
+ 
 </body>
 </html>
